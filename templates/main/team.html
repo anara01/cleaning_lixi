@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block team %}
+<!-- Page Title -->
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="title-item">
+                    <h2>Team</h2>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevrons-right'></i>
+                        </li>
+                        <li>
+                            <span>Team</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Title -->
+
+<!-- Team -->
+<section class="team-area ptb-100">
+    <div class="container">
+        <div class="row">
+            {% for team in team_list %}
+            <div class="col-sm-6 col-lg-4">
+                <div class="team-item">
+                    <div class="team-top">
+                        <img src="{{ team.image.url }}" alt="Team">
+                        <ul>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bxl-facebook'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bxl-twitter'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bxl-linkedin'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class='bx bxl-instagram'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>{{ team.name }} {{ team.lastname }}</h3>
+                    <span>{{ team.jobteam }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="pagination-area">
+            <ul>
+                <li>
+                    <a href="#">Prev</a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Team -->
+{% endblock team%}
+
+
+
+
+
+
